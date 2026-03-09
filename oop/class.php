@@ -26,13 +26,13 @@ $sale2 = new Sale(date('Y-m-d'));
 echo "LLamadas: " . Sale::$called . "<br>"; // Output: 2
 
 // echo $sale->total = 10.5; // Error: Cannot access protected property Sale::$total
-echo $sale->date = date('Y-m-d');
+// echo $sale->date = date('Y-m-d');
 print_r($sale);
 echo $sale->createInvoice();
 
 class Sale {
     protected float $total;
-    public string $date;
+    private string $date;
     public static $called = 0;
     private $concepts = [];
     protected $sharedConcepts;
@@ -63,6 +63,18 @@ class Sale {
         return $this->total;
     }
 
+    public function getDate(): string {
+        return $this->date;
+    }
+
+    public function setDate(string $date): void {
+        if( strlen($date) > 10 || strlen($date) < 10 ) {
+            echo "Error: La fecha no puede tener más de 10 caracteres (YYYY-MM-DD).<br>";
+            return;
+        }
+        $this->date = $date;
+    }
+
     public function createInvoice() {
         return "Invoice created for total: $this->total on date: $this->date";
     }
@@ -79,7 +91,7 @@ class OnlineSale extends Sale {
 
     // método específico de la clase hija
     public function showInfo(): string {
-        return "Online Sale - Total: $this->total, Date: $this->date, Payment Method: $this->paymentMethod";
+        return "Online Sale - Total: $this->total, Date: " . $this->getDate() . ", Payment Method: $this->paymentMethod";
     }
 
     public function showConcepts(): string {
