@@ -1,0 +1,15 @@
+2026-03-10 14:51:02 - Invoice created
+2026-03-10 14:51:06 - Invoice created
+2026-03-10 14:51:07 - Invoice created
+2026-03-10 15:00:19 - Invoice created
+2026-03-10 15:00:20 - Invoice created
+2026-03-10 15:00:24 - Invoice created
+2026-03-10 15:03:10 - Invoice created
+2026-03-10 15:03:11 - Invoice created
+2026-03-10 15:03:48 - Invoice created
+2026-03-10 15:03:50 - Invoice created
+2026-03-10 15:03:51 - Invoice created
+2026-03-10 15:03:52 - Invoice created
+2026-03-10 15:11:16 - Invoice created succesfully!
+2026-03-10 15:11:17 - Invoice created succesfully!
+2026-03-10 15:11:34 - Invoice created succesfully!
